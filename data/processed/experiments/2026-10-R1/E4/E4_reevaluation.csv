@@ -1,0 +1,13 @@
+run_id,cell_id,eta_regen,mass_scenario,tour_energy_clipped_matrix_wh,tour_energy_exact_matrix_wh,difference_wh,difference_pct,legs_differing,legs_total
+2026-09-29-urgup,A-dem-eta0.0-empty,0.0,empty,37312.5,37312.5,0.0,0.0,0,137
+2026-09-29-urgup,A-dem-eta0.0-average,0.0,average,40944.8,40944.8,0.0,0.0,0,137
+2026-09-29-urgup,A-dem-eta0.0-full,0.0,full,44579.3,44579.3,0.0,0.0,0,137
+2026-09-29-urgup,A-dem-eta0.3-empty,0.3,empty,33082.7,33082.7,0.0,0.0,0,137
+2026-09-29-urgup,A-dem-eta0.3-average,0.3,average,36230.3,36230.3,0.0,0.0,0,137
+2026-09-29-urgup,A-dem-eta0.3-full,0.3,full,39407.4,39407.4,0.0,0.0,0,137
+2026-09-29-urgup,A-dem-eta0.5-empty,0.5,empty,30234.9,30234.9,0.0,0.0,0,137
+2026-09-29-urgup,A-dem-eta0.5-average,0.5,average,33063.4,33063.4,0.0,0.0,0,137
+2026-09-29-urgup,A-dem-eta0.5-full,0.5,full,35937.8,35937.8,0.0,0.0,0,137
+2026-09-29-urgup,A-dem-eta0.7-empty,0.7,empty,26784.1,26784.1,0.0,0.0,0,137
+2026-09-29-urgup,A-dem-eta0.7-average,0.7,average,29227.9,29227.9,0.0,0.0,0,137
+2026-09-29-urgup,A-dem-eta0.7-full,0.7,full,31718.6,31718.6,0.0,0.0,0,137

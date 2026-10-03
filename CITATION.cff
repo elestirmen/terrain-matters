@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the article below and this package."
+title: "Terrain Matters: replication package"
+type: software
+license: MIT
+repository-code: "https://github.com/elestirmen/terrain-matters"
+authors:
+  - family-names: "Arık"
+    given-names: "Ahmet Ertuğrul"
+    affiliation: "Department of Information Systems and Technologies, Cappadocia University"
+    orcid: "https://orcid.org/0000-0002-7952-4311"
+  - family-names: "Ülkü"
+    given-names: "M. Ali"
+    affiliation: "Faculty of Management, Dalhousie University"
+    orcid: "https://orcid.org/0000-0002-8495-3364"
+keywords:
+  - electric fleet routing
+  - road grade
+  - digital elevation model
+  - regenerative braking
+  - vehicle routing problem
+  - green logistics
+preferred-citation:
+  type: unpublished
+  title: "Terrain Matters: Does Planar Routing Mislead Energy-Optimal Design of Electric Fleets? Evidence from a Hilly Town"
+  authors:
+    - family-names: "Arık"
+      given-names: "Ahmet Ertuğrul"
+      orcid: "https://orcid.org/0000-0002-7952-4311"
+    - family-names: "Ülkü"
+      given-names: "M. Ali"
+      orcid: "https://orcid.org/0000-0002-8495-3364"
+  notes: "Manuscript in preparation for Logistics (MDPI)."
+  year: 2026

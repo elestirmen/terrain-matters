@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "status": "DOĞRULANACAK",
+  "note": "Bütün sayılar yer tutucudur. Her satırın kaynağı (üretici föyü, hakemli ölçüm, test raporu) 'sources' altına yazılmadan hiçbiri makaleye girmez. Aralıklar docs/paper/01-enerji-modeli-ve-kod-tasarimi.md §3'ten alınmıştır.",
+  "passenger_mass_kg_each": 75.0,
+  "mass_scenarios": {
+    "empty": 0,
+    "average": 7,
+    "full": 14
+  },
+  "default_profile": "placeholder_minibus",
+  "profiles": {
+    "placeholder_minibus": {
+      "label": "Elektrikli minibüs sınıfı, yer tutucu (aday: Türkiye'de üretilen 14 koltuklu elektrikli minibüs)",
+      "mass_empty_kg": 4200.0,
+      "seat_count": 14,
+      "c_rr": 0.010,
+      "cd_a_m2": 3.0,
+      "eta_drive": 0.88,
+      "eta_regen": 0.5,
+      "p_regen_max_kw": 60.0,
+      "p_aux_kw": 2.0,
+      "air_density_kg_m3": 1.15,
+      "sources": {
+        "mass_empty_kg": "DOĞRULANACAK: üretici föyü (aralık 3500-5000 kg, batarya dahil)",
+        "c_rr": "DOĞRULANACAK: asfalt, aralık 0,008-0,012",
+        "cd_a_m2": "DOĞRULANACAK: C_d 0,40-0,50 × A 6-7 m²",
+        "eta_drive": "DOĞRULANACAK: invertör+motor+şanzıman, aralık 0,85-0,90",
+        "eta_regen": "Tarama parametresi: 0 / 0,3 / 0,5 / 0,7; föy değeri DOĞRULANACAK",
+        "p_regen_max_kw": "DOĞRULANACAK: motor/batarya şarj gücü sınırı, aralık 30-80 kW",
+        "p_aux_kw": "DOĞRULANACAK: HVAC mevsime bağlı, aralık 1-5 kW",
+        "air_density_kg_m3": "Rakım ~1100 m için 1,10-1,20 kg/m³; 1,15 alındı"
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+# Built by scripts/build_elevation.py and by experiment E7; see README.
+data/processed/elevation/

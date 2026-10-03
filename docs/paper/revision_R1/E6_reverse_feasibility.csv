@@ -1,0 +1,17 @@
+run_id,network,line,stops,direction,road_pieces,oneway_segments_violated,violated_length_m,line_length_m,share_of_length_pct,reverse_as_driven_legal,legal_reverse_available,E_forward_wh,E_forward_stored_wh,E_reverse_physical_wh,E_legal_reverse_wh,legal_reverse_km,forward_km,asymmetry_physical,asymmetry_legal,legal_reverse_cheaper,unmatched_length_m,forward_as_drawn_violations,forward_as_drawn_violated_length_m,note
+2026-10-R1,dem_opt,Line 1,25,reverse,139,7,289.1,8519.7,3.39,False,True,2906.0,2905.98,2946.9,2926.3,8.787,8.52,0.0139,0.0069,False,,,,
+2026-10-R1,dem_opt,Line 2,22,reverse,115,21,1730.0,8804.3,19.65,False,True,3336.6,3336.56,3363.1,3785.7,9.969,8.804,0.0079,0.1186,False,,,,
+2026-10-R1,dem_opt,Line 3,20,reverse,157,10,485.5,10674.5,4.55,False,True,4255.4,4255.44,4201.8,4463.0,11.416,10.674,0.0126,0.0465,False,,,,
+2026-10-R1,dem_opt,Line 4,20,reverse,126,31,3862.2,10055.1,38.41,False,True,4081.8,4081.76,3922.6,8202.5,19.531,10.055,0.039,0.5024,False,,,,
+2026-10-R1,dem_opt,Line 5,19,reverse,161,32,2324.6,12906.1,18.01,False,True,4578.3,4578.32,4837.5,6050.8,15.873,12.906,0.0536,0.2434,False,,,,
+2026-10-R1,dem_opt,Line 6,13,reverse,167,18,1489.2,26139.8,5.7,False,True,11506.1,11506.1,12289.8,11982.9,25.778,26.14,0.0638,0.0398,False,,,,
+2026-10-R1,dem_opt,Line 7,5,reverse,73,22,1329.6,4191.5,31.72,False,True,1531.7,1531.67,2018.4,2171.7,5.403,4.192,0.2412,0.2947,False,,,,
+2026-10-R1,dem_opt,Line 8,5,reverse,42,37,2366.0,2509.5,94.28,False,True,867.5,867.52,847.2,1503.9,4.42,2.51,0.0234,0.4231,False,,,,
+2026-10-R1,municipal_as_drawn,AKSALUR,12,reverse,161,20,1431.0,28112.2,5.09,False,True,11498.8,,,11967.5,25.859,26.218,,0.0392,False,45.9,1,10.0,"forward and legal reverse are routed on the graph through the drawn stop order (graph speeds), not on the drawing"
+2026-10-R1,municipal_as_drawn,BAHÇELİEVLER,26,reverse,170,49,3578.1,10054.9,35.59,False,True,4269.0,,,4220.2,12.638,12.939,,0.0114,True,238.1,5,72.5,"forward and legal reverse are routed on the graph through the drawn stop order (graph speeds), not on the drawing"
+2026-10-R1,municipal_as_drawn,EVKA,19,reverse,176,77,6636.5,11371.5,58.36,False,True,5648.7,,,6439.0,16.506,14.589,,0.1227,False,10.0,6,92.5,"forward and legal reverse are routed on the graph through the drawn stop order (graph speeds), not on the drawing"
+2026-10-R1,municipal_as_drawn,FATİH,20,reverse,169,43,3327.7,10267.4,32.41,False,True,3835.1,,,3682.6,10.534,10.556,,0.0398,True,0.0,4,62.5,"forward and legal reverse are routed on the graph through the drawn stop order (graph speeds), not on the drawing"
+2026-10-R1,municipal_as_drawn,HADOSAN,0,reverse,117,43,3642.2,6804.6,53.53,False,False,,,,,,,,,,0.0,6,112.2,
+2026-10-R1,municipal_as_drawn,KAVAKLIÖNÜ,15,reverse,151,65,6109.8,10020.0,60.98,False,True,3879.3,,,5287.3,13.429,9.324,,0.2663,False,0.0,7,94.8,"forward and legal reverse are routed on the graph through the drawn stop order (graph speeds), not on the drawing"
+2026-10-R1,municipal_as_drawn,TOKİ,22,reverse,187,82,6330.1,13914.8,45.49,False,True,6142.4,,,6489.8,17.089,16.84,,0.0535,False,236.7,11,261.0,"forward and legal reverse are routed on the graph through the drawn stop order (graph speeds), not on the drawing"
+2026-10-R1,municipal_as_drawn,ÜSET,0,reverse,80,31,2492.6,6328.1,39.39,False,False,,,,,,,,,,0.0,4,40.0,

@@ -1,0 +1,114 @@
+{
+  "run_id": "2026-10-R1",
+  "experiment": "E3",
+  "started_utc": "2026-09-29T16:45:13.115783+00:00",
+  "git_commit": "40b7e70675b38d9fa94700df1b9ed1bbcaec338e",
+  "git_dirty": true,
+  "machine": {
+    "node": "ubuntu",
+    "platform": "Linux-7.0.0-34-generic-x86_64-with-glibc2.43",
+    "cpus": 4,
+    "python": "3.14.4",
+    "ortools": "9.15.6755"
+  },
+  "draft_revision": 135,
+  "stop_count": 135,
+  "road_network_revision": 1584,
+  "road_network_features": 1948,
+  "elevation": {
+    "dataset": "glo30-v1",
+    "source": "Copernicus DEM GLO-30",
+    "sha256": "c50c7823e4d4a68d73068ead6825ad2515c36a667d31f1d79655a1ca983442e1",
+    "vertical_accuracy_m": 4.0,
+    "grade_uncertainty_percent": 5.7,
+    "reference_elevation_m": 1063.8216853295582
+  },
+  "vehicle_profiles_sha256": "bb00c096187d140ef9f2ab910c0e00d458119ce8d8b0bbe5cbe18b15b58e6543",
+  "vehicle_profiles": {
+    "schema_version": 1,
+    "status": "DOĞRULANACAK",
+    "note": "Bütün sayılar yer tutucudur. Her satırın kaynağı (üretici föyü, hakemli ölçüm, test raporu) 'sources' altına yazılmadan hiçbiri makaleye girmez. Aralıklar docs/paper/01-enerji-modeli-ve-kod-tasarimi.md §3'ten alınmıştır.",
+    "passenger_mass_kg_each": 75.0,
+    "mass_scenarios": {
+      "empty": 0,
+      "average": 7,
+      "full": 14
+    },
+    "default_profile": "placeholder_minibus",
+    "profiles": {
+      "placeholder_minibus": {
+        "label": "Elektrikli minibüs sınıfı, yer tutucu (aday: Türkiye'de üretilen 14 koltuklu elektrikli minibüs)",
+        "mass_empty_kg": 4200.0,
+        "seat_count": 14,
+        "c_rr": 0.01,
+        "cd_a_m2": 3.0,
+        "eta_drive": 0.88,
+        "eta_regen": 0.5,
+        "p_regen_max_kw": 60.0,
+        "p_aux_kw": 2.0,
+        "air_density_kg_m3": 1.15,
+        "sources": {
+          "mass_empty_kg": "DOĞRULANACAK: üretici föyü (aralık 3500-5000 kg, batarya dahil)",
+          "c_rr": "DOĞRULANACAK: asfalt, aralık 0,008-0,012",
+          "cd_a_m2": "DOĞRULANACAK: C_d 0,40-0,50 × A 6-7 m²",
+          "eta_drive": "DOĞRULANACAK: invertör+motor+şanzıman, aralık 0,85-0,90",
+          "eta_regen": "Tarama parametresi: 0 / 0,3 / 0,5 / 0,7; föy değeri DOĞRULANACAK",
+          "p_regen_max_kw": "DOĞRULANACAK: motor/batarya şarj gücü sınırı, aralık 30-80 kW",
+          "p_aux_kw": "DOĞRULANACAK: HVAC mevsime bağlı, aralık 1-5 kW",
+          "air_density_kg_m3": "Rakım ~1100 m için 1,10-1,20 kg/m³; 1,15 alındı"
+        }
+      }
+    }
+  },
+  "base_params": {
+    "planning_mode": "vrp",
+    "route_count": 8,
+    "single_route_per_mahalle": true,
+    "small_mahalle_stop_limit": 4,
+    "route_shape": "shortest_closed",
+    "solver_time_limit_seconds": 15,
+    "distance_balance_weight": 20,
+    "longest_route_weight": 28,
+    "dwell_time_seconds": 30,
+    "avg_speed_kmh": 30,
+    "min_stops_per_route": 1,
+    "max_stops_per_route": 0,
+    "max_route_distance_km": 0,
+    "max_route_duration_minutes": 0,
+    "exact_tsp_limit": 8,
+    "seed": 42,
+    "scenario_id": "terrain-matters",
+    "scenario_type": "CURRENT_NETWORK",
+    "vehicle_profile": null,
+    "report_energy": true
+  },
+  "energy_options_default": {
+    "surface": "dem",
+    "eta_regen": 0.5,
+    "mass_scenario": "average",
+    "dem_scale": 1.0,
+    "dem_noise_sigma_m": 0.0
+  },
+  "energy_model_version": "segment_model_v1",
+  "main_run": {
+    "run_id": "2026-09-29-urgup",
+    "manifest": "f54bb50227d7ea63603195adccc45365d5cc197d"
+  },
+  "sigmas_m": [
+    1.0,
+    2.0,
+    2.5,
+    4.0
+  ],
+  "corr_lengths_cells": [
+    3,
+    10
+  ],
+  "repeats": 30,
+  "time_limit_s": 5,
+  "seed_rule": "3000 + 1000*corr_index + 100*sigma_index + repeat",
+  "noise_model": "Gaussian per cell, box mean over corr×corr cells (3: offsets -1..1; 10: offsets -5..4), rescaled by sqrt(count) so the marginal sigma is preserved",
+  "finished_utc": "2026-09-29T17:36:25.908418+00:00",
+  "cell_count": 240,
+  "total_solver_seconds": 2805.2
+}

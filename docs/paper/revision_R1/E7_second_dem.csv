@@ -1,0 +1,9 @@
+run_id,network,evaluated_on,eta_regen,mass_scenario,E_dem_wh,E_planar_wh,km,climb_m,mean_direction_asymmetry,max_direction_asymmetry,friction_share_pct,planar_error_pct,voti_vs_distance_wh,voti_vs_distance_pct,voti_vs_planar_wh,jaccard_glo30_vs_aw3d30_solutions,stops_changing_line,kendall_tau,time_limit_s,seed
+2026-10-R1,distance_opt,aw3d30-v1,0.5,average,34299.9,21862.5,81.838,1867.0,0.0223,0.0478,3.78,-36.26,,,,1.0,0,0.9931,15,42
+2026-10-R1,distance_opt,glo30-v1,0.5,average,33940.0,21862.5,81.838,1845.9,0.027,0.0567,3.7,-35.58,,,,1.0,0,0.9931,15,42
+2026-10-R1,planar_opt,aw3d30-v1,0.5,average,34598.8,21851.7,81.975,1906.4,0.0229,0.0469,3.72,-36.84,,,,1.0,0,0.9931,15,42
+2026-10-R1,planar_opt,glo30-v1,0.5,average,34158.9,21851.7,81.975,1871.3,0.0249,0.0567,3.62,-36.03,,,,1.0,0,0.9931,15,42
+2026-10-R1,dem_opt_glo30,aw3d30-v1,0.5,average,33404.5,22375.0,83.8,1809.0,0.0596,0.276,2.79,-33.02,895.4,2.61,1194.3,1.0,0,0.9931,15,42
+2026-10-R1,dem_opt_glo30,glo30-v1,0.5,average,33063.4,22375.0,83.8,1783.9,0.0569,0.2411,2.64,-32.33,876.6,2.58,1095.5,1.0,0,0.9931,15,42
+2026-10-R1,dem_opt_aw3d30,aw3d30-v1,0.5,average,33355.8,22392.8,83.793,1801.3,0.0574,0.2642,2.8,-32.87,944.1,2.75,1243.0,1.0,0,0.9931,15,42
+2026-10-R1,dem_opt_aw3d30,glo30-v1,0.5,average,33119.0,22392.8,83.793,1785.9,0.0528,0.2126,2.67,-32.39,821.0,2.42,1039.9,1.0,0,0.9931,15,42

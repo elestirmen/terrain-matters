@@ -1,0 +1,13 @@
+run_id,eta_regen,mass_scenario,negative_edges_physics_potential,negative_edges_johnson,directed_edges,bellman_ford_passes,negative_cycle_found,pairs_total,pairs_differing,pairs_clipped_worse,pairs_clipped_better,max_abs_diff_wh,mean_abs_diff_wh,max_rel_diff_pct,mean_rel_diff_pct,sum_abs_diff_wh,seconds
+2026-10-R1,0.0,empty,0,0,4321,0,False,16770,0,0,0,0.0,0.0,0.0,0.0,0.0,13.3
+2026-10-R1,0.0,average,0,0,4321,0,False,16770,0,0,0,0.0,0.0,0.0,0.0,0.0,20.6
+2026-10-R1,0.0,full,0,0,4321,0,False,16770,0,0,0,0.0,0.0,0.0,0.0,0.0,17.5
+2026-10-R1,0.3,empty,1,0,4321,17,False,16770,0,0,0,0.0,0.0,0.0,0.0,0.0,19.7
+2026-10-R1,0.3,average,1,0,4321,19,False,16770,0,0,0,0.0,0.0,0.0,0.0,0.0,17.2
+2026-10-R1,0.3,full,1,0,4321,23,False,16770,0,0,0,0.0,0.0,0.0,0.0,0.0,13.8
+2026-10-R1,0.5,empty,5,0,4321,28,False,16770,0,0,0,0.0,0.0,0.0,0.0,0.0,14.1
+2026-10-R1,0.5,average,6,0,4321,30,False,16770,0,0,0,0.0,0.0,0.0,0.0,0.0,16.1
+2026-10-R1,0.5,full,6,0,4321,31,False,16770,0,0,0,0.0,0.0,0.0,0.0,0.0,15.5
+2026-10-R1,0.7,empty,13,0,4321,40,False,16770,125,125,0,29.89,0.0436,2.8827,0.003,730.84,14.9
+2026-10-R1,0.7,average,14,0,4321,38,False,16770,125,125,0,31.601,0.0436,2.7429,0.00274,731.26,14.9
+2026-10-R1,0.7,full,14,0,4321,37,False,16770,125,125,0,33.313,0.0439,2.6304,0.00254,736.6,14.3

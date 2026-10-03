@@ -1,0 +1,25 @@
+network,line,stored_energy_dem_wh,repriced_energy_dem_wh,difference_wh
+distance_opt,Line 1,2954.17,2954.17,-0.0
+distance_opt,Line 2,3341.28,3341.28,-0.0
+distance_opt,Line 3,4323.71,4323.71,0.0
+distance_opt,Line 4,4103.36,4103.36,0.0
+distance_opt,Line 5,4637.08,4637.08,-0.0
+distance_opt,Line 6,12065.32,12065.32,0.0
+distance_opt,Line 7,1647.46,1647.46,0.0
+distance_opt,Line 8,867.52,867.52,-0.0
+planar_opt,Line 1,2952.98,2952.98,0.0
+planar_opt,Line 2,3441.64,3441.64,0.0
+planar_opt,Line 3,4323.71,4323.71,0.0
+planar_opt,Line 4,4102.18,4102.18,-0.0
+planar_opt,Line 5,4635.89,4635.89,0.0
+planar_opt,Line 6,12064.14,12064.14,-0.0
+planar_opt,Line 7,1669.4,1669.4,0.0
+planar_opt,Line 8,969.0,969.0,0.0
+dem_opt,Line 1,2905.98,2905.98,0.0
+dem_opt,Line 2,3336.56,3336.56,0.0
+dem_opt,Line 3,4255.44,4255.44,-0.0
+dem_opt,Line 4,4081.76,4081.76,-0.0
+dem_opt,Line 5,4578.32,4578.32,0.0
+dem_opt,Line 6,11506.1,11506.1,0.0
+dem_opt,Line 7,1531.67,1531.67,-0.0
+dem_opt,Line 8,867.52,867.52,-0.0

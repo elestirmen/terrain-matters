@@ -1,0 +1,10 @@
+# Python 3.12 or later (tested on 3.12.3 and 3.14.4). The published runs used Python 3.14.4 and the versions in
+# the comments; OR-Tools is pinned because the solver's search path depends on it.
+ortools==9.15.6755
+networkx>=3.4,<4          # 3.6.1
+shapely>=2.0,<3           # 2.1.2
+geopandas>=1.0,<2         # 1.1.4, imported by the store layer
+numpy>=2.0,<3             # 2.5.2
+matplotlib>=3.9,<4        # 3.11.2, figures only
+rasterio>=1.3,<2          # 1.5.1, elevation grid build only
+pillow>=10,<14            # 12.3.0, elevation grid build only
