@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/icon.png" alt="terrain-matters simgesi" width="120"></p>
+
 # Terrain Matters: replication package
 
 **English** · [Türkçe](README.tr.md)
