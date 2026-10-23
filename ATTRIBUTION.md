@@ -15,7 +15,7 @@ This package has three licences, because its parts come from different places.
 | `data/editable/road_network.geojson` | Directed road graph, revision 1,584, 1,948 road features | Derived from **OpenStreetMap**. Side streets that OpenStreetMap lacks were added from the street centrelines of the **Municipality of Ürgüp** (MAKS). One-way rules come from the municipality's signage records; part of the road classes come from the municipal transport master plan. |
 | `data/editable/network.json` | Stop register, neighbourhood boundaries and published lines at draft revision 135 | Municipality of Ürgüp; stops snapped and curated in the authors' planning platform |
 | `data/processed/baseline/baseline_network.json` | The eight lines operated today, frozen | Digitised from the route drawings and stop register of the Municipality of Ürgüp |
-| `data/parameters/vehicle_profiles.json` | Vehicle parameters of the energy model | Authors. The values are placeholders within the ranges reported for the vehicle class and are flagged `DOĞRULANACAK` ("to be verified") until sources are added |
+| `data/parameters/vehicle_profiles.json` | Vehicle parameters of the energy model | Authors. A representative parameter set for a 14-seat battery-electric minibus class. The source and literature range of each value, and where a value departs from them, are in [`vehicle_parameter_sources.md`](data/parameters/vehicle_parameter_sources.md) |
 | `data/processed/experiments/` | Outputs of the main run and of the revision (R1) runs | Authors |
 | `docs/paper/figures/`, `docs/paper/revision_R1/` | Figures and tables drawn from the run outputs | Authors |
 

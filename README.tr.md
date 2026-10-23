@@ -37,9 +37,11 @@ ve tabloyu yeniden çizebilir.
 > [!NOTE]
 > **Durum (Ekim 2026).** Makale hazırlanıyor.
 > [`data/parameters/vehicle_profiles.json`](data/parameters/vehicle_profiles.json) içindeki araç parametreleri
-> `DOĞRULANACAK` etiketli yer tutuculardır. Bu yüzden aşağıdaki bulgular yön ve mekanizma olarak anlatılıyor.
-> Parametrelerin kaynağı bulunup koşular yinelendiğinde bütün mutlak sayılar değişecek. Sayıların kendisi koşu
-> çıktılarında ve R1 raporunda. Arşivlenen sürümün DOI'si buraya eklenecek.
+> 14 koltuklu bataryalı elektrikli minibüs sınıfı için temsili bir parametre setidir. Her değerin kaynağı ve
+> literatürdeki aralığı [`data/parameters/vehicle_parameter_sources.md`](data/parameters/vehicle_parameter_sources.md) dosyasında. Dosyadaki
+> geliştirme etiketleri (`DOĞRULANACAK`, `placeholder_minibus`) bilerek değiştirilmedi, çünkü her koşu manifesti
+> dosyanın sağlama toplamını kaydediyor. Aşağıdaki bulgular yön ve mekanizma olarak anlatılıyor; sayıların kendisi
+> koşu çıktılarında ve R1 raporunda. Arşivlenen sürümün DOI'si buraya eklenecek.
 
 ---
 
@@ -141,7 +143,7 @@ bileşim yayımlanmış kıyas veri setlerinde nadirdir.
 | Hızlar | Belediye değeri ya da yol sınıfına göre varsayılan (50 / 45 / 40 / 30 / 20 / 15 km/sa). Bunlar yasal ya da varsayılan hızlardır, ölçülmüş işletme hızları değildir | Yol grafiğinin içinde |
 | Yükseklik | Copernicus DEM GLO-30 (30 m aralık, LE90 4 m'nin altında); 976–1.599 m aralığını kapsayan 345 × 403 grid, veri seti `glo30-v1`, sağlama toplamıyla. Revizyon deneylerinde ikinci DEM olarak JAXA AW3D30 (`aw3d30-v1`) kullanılıyor | Yeniden dağıtılmaz; [`scripts/build_elevation.py`](scripts/build_elevation.py) kurar |
 | Bugünkü hatlar | Belediyenin güzergâh çizimlerinden ve durak kaydından sayısallaştırılmış 8 hat; dondurulmuş, salt okunur referans katmanı | [`data/processed/baseline/baseline_network.json`](data/processed/baseline/baseline_network.json) |
-| Araç | 14 koltuklu elektrikli minibüs sınıfı; parametreler yer tutucu (bkz. [Kapsam ve sınırlılıklar](#kapsam-ve-sınırlılıklar)) | [`data/parameters/vehicle_profiles.json`](data/parameters/vehicle_profiles.json) |
+| Araç | 14 koltuklu elektrikli minibüs sınıfı; temsili parametre seti (bkz. [kaynaklar ve aralıklar](data/parameters/vehicle_parameter_sources.md)) | [`data/parameters/vehicle_profiles.json`](data/parameters/vehicle_profiles.json) |
 
 Duraklar grafa, en yakın yol durağın izdüşümünde bölünerek bağlanır. Herhangi bir yola 120 m'den uzak bir durak düz
 çizgiyle bağlanmaz, reddedilir. Yönlü yolu olmayan bir durak çifti büyük daire mesafesiyle doldurulmaz, hata olarak
@@ -283,7 +285,8 @@ Bunlar hakem aşaması için hazırlanan sağlamlık kontrolleridir. Rapor
 
 ## Ön bulgular
 
-Bu bulgular yer tutucu araç parametreleriyle elde edildi ve yalnızca yön ve mekanizma olarak veriliyor. Sayılar koşu
+Bu bulgular temsili araç parametre setiyle ([kaynaklar ve aralıklar](data/parameters/vehicle_parameter_sources.md)) elde edildi
+ve yön ve mekanizma olarak veriliyor. Sayılar koşu
 çıktılarında (`experiments_summary.csv`, `network_metrics.csv`) ve [R1 raporunda](docs/paper/revision_R1/REPORT.md).
 
 **1. Düzlemsel model değerlendirilen her ağda enerjiyi küçümsüyor (H1 destekleniyor).** Bu hem optimize edilen ağlar
@@ -304,7 +307,7 @@ reddediliyor.
 
 <p align="center">
   <img src="docs/paper/figures/fig08_voti_vs_scale.png" alt="Arazi yoğunluğuna göre arazi bilgisinin değeri, düzlemsel küçümseme ve üyelik benzerliği" width="640">
-  <br><sub><b>Makalenin Şekil 8'i.</b> Arazi yoğunluğu taraması. Değerler yer tutucu araç parametreleriyle elde edilmiş ön değerlerdir.</sub>
+  <br><sub><b>Makalenin Şekil 8'i.</b> Arazi yoğunluğu taraması. Değerler temsili araç parametre setiyle elde edildi.</sub>
 </p>
 
 **4. Daha iyi bir aktarma organı tahmini daha az yanlış, kararı daha değerli yapıyor.** Yüksek rejen verimi düzlemsel
@@ -342,8 +345,10 @@ bu açık bir soru olarak kalıyor.
 
 - **Kapsam dışı:** durak sayısını azaltma, sefer sıklığı, headway, araç sayısı, yolcu talebi ve araç kapasitesi.
   Sonuçlar her hattın **bir çevrimi** için raporlanır, bu yüzden sıklık varsayımı gerekmez.
-- **Araç parametreleri yer tutucudur** ve sınıf için raporlanan aralıklar içindedir. η<sub>regen</sub> ve kütle
-  taramaları okurun gerçek bir aracı sonuçlar içinde konumlamasını sağlar.
+- **Araç parametreleri belirli bir aracı değil, temsili bir seti tanımlar.** Değerlerin çoğu sınıf için raporlanan
+  aralıklar içindedir. Boş kütle (4.200 kg) sınıfın ağır ucundadır ve tam yük senaryosu en yakın seri üretim
+  modelinin azami yüklü ağırlığını biraz aşar ([kaynaklar ve aralıklar](data/parameters/vehicle_parameter_sources.md)).
+  η<sub>regen</sub> ve kütle taramaları okurun gerçek bir aracı sonuçlar içinde konumlamasını sağlar.
 - Hız yolun yasal ya da varsayılan hızıdır ve kesim boyunca sabittir. İvmelenme yalnızca duraklarda modellenir;
   rejen sınırının altında kalmak için serbest yuvarlanma modellenmez.
 - Çözücü süre sınırlı bir sezgiseldir, bu yüzden "optimum" her zaman "bulunan en iyi" demektir.
@@ -373,7 +378,7 @@ bu açık bir soru olarak kalıyor.
 | `data/editable/network.json` | Girdi: durak kaydı, mahalleler ve yayınlanan hatlar (taslak revizyonu 135) |
 | `data/editable/road_network.geojson` | Girdi: yönlü yol grafiği (revizyon 1.584) |
 | `data/processed/baseline/baseline_network.json` | Girdi: bugün işletilen 8 hat, dondurulmuş |
-| `data/parameters/vehicle_profiles.json` | Araç parametreleri (yer tutucu) |
+| `data/parameters/vehicle_profiles.json`, [`vehicle_parameter_sources.md`](data/parameters/vehicle_parameter_sources.md) | Araç parametreleri (temsili set) ve her değerin kaynağı ile aralığı |
 | `data/processed/experiments/2026-09-29-urgup/` | Ana koşunun çıktıları |
 | `data/processed/experiments/2026-10-R1/` | Revizyon koşularının çıktıları |
 | `docs/paper/figures/`, `docs/paper/revision_R1/` | Bu çıktılardan çizilen şekiller ve tablolar; R1 raporu |

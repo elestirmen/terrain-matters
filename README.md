@@ -36,10 +36,12 @@ redraw every figure and table of the article.
 
 > [!NOTE]
 > **Status (October 2026).** The manuscript is in preparation. The vehicle parameters in
-> [`data/parameters/vehicle_profiles.json`](data/parameters/vehicle_profiles.json) are placeholders flagged
-> `DOĞRULANACAK` ("to be verified"). The findings below are therefore described by direction and mechanism. Every
-> absolute number will move once the parameters are sourced and the runs are repeated. The numbers themselves are in
-> the run outputs and the R1 report. The DOI of the archived version will be added here.
+> [`data/parameters/vehicle_profiles.json`](data/parameters/vehicle_profiles.json) form a representative parameter
+> set for a 14-seat battery-electric minibus class. The source and literature range of each value are in
+> [`data/parameters/vehicle_parameter_sources.md`](data/parameters/vehicle_parameter_sources.md). The file keeps its development labels
+> (`DOĞRULANACAK`, `placeholder_minibus`) unchanged, because every run manifest records its checksum. The findings
+> below are described by direction and mechanism; the numbers are in the run outputs and the R1 report. The DOI of the
+> archived version will be added here.
 
 ---
 
@@ -141,7 +143,7 @@ and strong relief, a combination that is rare in published benchmarks.
 | Speeds | Municipal value or a default by road class (50 / 45 / 40 / 30 / 20 / 15 km/h). These are legal or assumed speeds, not measured operating speeds | In the road graph |
 | Elevation | Copernicus DEM GLO-30 (30 m spacing, LE90 below 4 m), sampled into a 345 × 403 grid covering 976–1,599 m; dataset `glo30-v1`, checksummed. A second DEM, JAXA AW3D30 (`aw3d30-v1`), is used in the revision experiments | Not redistributed; built by [`scripts/build_elevation.py`](scripts/build_elevation.py) |
 | Lines operated today | Frozen, read-only reference layer of the 8 lines, digitised from the municipality's route drawings and stop register | [`data/processed/baseline/baseline_network.json`](data/processed/baseline/baseline_network.json) |
-| Vehicle | 14-seat electric minibus class, with placeholder parameters (see [Scope and limitations](#scope-and-limitations)) | [`data/parameters/vehicle_profiles.json`](data/parameters/vehicle_profiles.json) |
+| Vehicle | 14-seat electric minibus class, representative parameter set (see [sources and ranges](data/parameters/vehicle_parameter_sources.md)) | [`data/parameters/vehicle_profiles.json`](data/parameters/vehicle_profiles.json) |
 
 Stops are attached to the graph by splitting the nearest road at the stop's projection. A stop more than 120 m from any
 road is rejected rather than connected by a straight line. A stop pair without a directed path is reported as an error
@@ -284,7 +286,8 @@ CSV files. The outputs are in [`data/processed/experiments/2026-10-R1/`](data/pr
 
 ## Preliminary findings
 
-These findings come from placeholder vehicle parameters. They are given by direction and mechanism only; the numbers
+These findings come from a representative vehicle parameter set ([sources and ranges](data/parameters/vehicle_parameter_sources.md)).
+They are given by direction and mechanism; the numbers
 are in the run outputs (`experiments_summary.csv`, `network_metrics.csv`) and in the
 [R1 report](docs/paper/revision_R1/REPORT.md).
 
@@ -307,7 +310,7 @@ membership on this network.
 
 <p align="center">
   <img src="docs/paper/figures/fig08_voti_vs_scale.png" alt="Value of terrain information, planar underestimate and membership similarity against terrain intensity" width="640">
-  <br><sub><b>Figure 8 of the manuscript.</b> Terrain-intensity sweep. These are preliminary values from placeholder vehicle parameters.</sub>
+  <br><sub><b>Figure 8 of the manuscript.</b> Terrain-intensity sweep. Values from the representative vehicle parameter set.</sub>
 </p>
 
 **4. A better drivetrain makes the estimate less wrong but the decision more valuable.** Higher regeneration
@@ -344,8 +347,10 @@ lines. Calling such changes "terrain-driven" needs a longer or exact search, and
 
 - **Out of scope:** stop reduction, service frequency, headway, fleet size, passenger demand and vehicle capacity.
   Results are reported **per cycle** of each line, so no assumption on frequency is needed.
-- **Vehicle parameters are placeholders** within the ranges reported for the class. The sweeps over η<sub>regen</sub>
-  and mass let a reader locate a real vehicle in the results.
+- **Vehicle parameters are a representative set, not a specific vehicle.** Most values lie within the ranges
+  reported for the class. The empty mass (4,200 kg) is at the heavy end, and the full-load case is slightly above the
+  GVW of the closest production model ([sources and ranges](data/parameters/vehicle_parameter_sources.md)). The sweeps
+  over η<sub>regen</sub> and mass let a reader locate a real vehicle in the results.
 - Speed is the road's legal or default speed, constant along a segment. Acceleration is modelled only at stops, and
   coasting to stay under the regeneration cap is not modelled.
 - The solver is a heuristic under a time limit, so "optimal" always means "best found".
@@ -374,7 +379,7 @@ lines. Calling such changes "terrain-driven" needs a longer or exact search, and
 | `data/editable/network.json` | Inputs: stop register, neighbourhoods and published lines (draft revision 135) |
 | `data/editable/road_network.geojson` | Inputs: directed road graph (revision 1,584) |
 | `data/processed/baseline/baseline_network.json` | Inputs: the 8 lines operated today, frozen |
-| `data/parameters/vehicle_profiles.json` | Vehicle parameters (placeholders) |
+| `data/parameters/vehicle_profiles.json`, [`vehicle_parameter_sources.md`](data/parameters/vehicle_parameter_sources.md) | Vehicle parameters (representative set), and the source and range of each value |
 | `data/processed/experiments/2026-09-29-urgup/` | Outputs of the main run |
 | `data/processed/experiments/2026-10-R1/` | Outputs of the revision runs |
 | `docs/paper/figures/`, `docs/paper/revision_R1/` | Figures and tables drawn from those outputs, and the R1 report |
