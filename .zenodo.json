@@ -1,0 +1,29 @@
+{
+  "upload_type": "software",
+  "title": "Terrain Matters: replication package",
+  "description": "<p>Code, data and outputs of the article <em>Terrain Matters: Does Planar Routing Mislead Energy-Optimal Design of Electric Fleets? Evidence from a Hilly Town</em> by Ahmet Ertuğrul Arık and M. Ali Ülkü, prepared for <em>Logistics</em> (MDPI).</p><p>The study runs on the real road graph, stop register and operated lines of the minibus (dolmuş) network of Ürgüp, Türkiye. The package holds the segment energy model, the OR-Tools route optimiser, the experiment runners, the inputs, the run outputs with their manifests, and the scripts that redraw every figure and table of the article. README.md explains how to rebuild the elevation grid and re-run the experiments, and SHA256SUMS checks every file.</p><p><strong>Licences.</strong> The licence field of this record refers to the code (MIT, see LICENSE). The road geometry is derived from OpenStreetMap and is available under the Open Database License 1.0 (LICENSE-ODbL), © OpenStreetMap contributors, with additions from the Municipality of Ürgüp. All other data, tables and figures are available under CC BY 4.0 (LICENSE-DATA). The elevation grids (Copernicus DEM GLO-30, ALOS AW3D30) are not redistributed; ATTRIBUTION.md lists the sources and the required notices.</p>",
+  "creators": [
+    {
+      "name": "Arık, Ahmet Ertuğrul",
+      "orcid": "0000-0002-7952-4311",
+      "affiliation": "Cappadocia University"
+    },
+    {
+      "name": "Ülkü, M. Ali",
+      "orcid": "0000-0002-8495-3364",
+      "affiliation": "Dalhousie University"
+    }
+  ],
+  "keywords": [
+    "electric fleet routing",
+    "road grade",
+    "digital elevation model",
+    "regenerative braking",
+    "vehicle routing problem",
+    "green logistics",
+    "replication package"
+  ],
+  "license": "mit",
+  "access_right": "open",
+  "language": "eng"
+}

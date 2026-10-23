@@ -379,6 +379,7 @@ lines. Calling such changes "terrain-driven" needs a longer or exact search, and
 | `data/processed/experiments/2026-10-R1/` | Outputs of the revision runs |
 | `docs/paper/figures/`, `docs/paper/revision_R1/` | Figures and tables drawn from those outputs, and the R1 report |
 | [`SOURCE.json`](SOURCE.json), [`SHA256SUMS`](SHA256SUMS) | Where the export came from, and a checksum of every file |
+| [`CITATION.cff`](CITATION.cff), [`.zenodo.json`](.zenodo.json) | Citation metadata: GitHub reads the first, Zenodo reads the second when it archives a release |
 
 The code is exported from the authors' planning platform for the Municipality of Ürgüp, which is not public. The
 package holds only what the experiments need, and the folder names are those the code expects.

@@ -378,6 +378,7 @@ bu açık bir soru olarak kalıyor.
 | `data/processed/experiments/2026-10-R1/` | Revizyon koşularının çıktıları |
 | `docs/paper/figures/`, `docs/paper/revision_R1/` | Bu çıktılardan çizilen şekiller ve tablolar; R1 raporu |
 | [`SOURCE.json`](SOURCE.json), [`SHA256SUMS`](SHA256SUMS) | Dışa aktarımın kaynağı ve her dosyanın sağlama toplamı |
+| [`CITATION.cff`](CITATION.cff), [`.zenodo.json`](.zenodo.json) | Atıf meta verisi: GitHub ilkini, Zenodo bir sürümü arşivlerken ikincisini okur |
 
 Kod, yazarların Ürgüp Belediyesi için geliştirdiği planlama platformundan dışa aktarıldı; platform public değil. Pakette
 yalnızca deneylerin ihtiyaç duyduğu kısım var ve klasör adları kodun beklediği adlardır.
