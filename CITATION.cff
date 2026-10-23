@@ -4,6 +4,14 @@ title: "Terrain Matters: replication package"
 type: software
 license: MIT
 repository-code: "https://github.com/elestirmen/terrain-matters"
+doi: "10.5281/zenodo.23591166"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23591166"
+    description: "Concept DOI: all versions of the package"
+  - type: doi
+    value: "10.5281/zenodo.23591167"
+    description: "Version v1.0.0"
 authors:
   - family-names: "Arık"
     given-names: "Ahmet Ertuğrul"

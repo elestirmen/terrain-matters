@@ -15,6 +15,7 @@
 </p>
 
 <p align="center">
+  <a href="https://doi.org/10.5281/zenodo.23591166"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.23591166.svg" alt="DOI"></a>
   <img src="https://img.shields.io/badge/python-3.12%2B-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
   <img src="https://img.shields.io/badge/OR--Tools-9.15.6755-4285F4?style=flat-square" alt="OR-Tools">
   <img src="https://img.shields.io/badge/DEM-Copernicus%20GLO--30-2E7D32?style=flat-square" alt="DEM">
@@ -41,7 +42,9 @@ ve tabloyu yeniden çizebilir.
 > literatürdeki aralığı [`data/parameters/vehicle_parameter_sources.md`](data/parameters/vehicle_parameter_sources.md) dosyasında. Dosyadaki
 > geliştirme etiketleri (`DOĞRULANACAK`, `placeholder_minibus`) bilerek değiştirilmedi, çünkü her koşu manifesti
 > dosyanın sağlama toplamını kaydediyor. Aşağıdaki bulgular yön ve mekanizma olarak anlatılıyor; sayıların kendisi
-> koşu çıktılarında ve R1 raporunda. Arşivlenen sürümün DOI'si buraya eklenecek.
+> koşu çıktılarında ve R1 raporunda. Paket Zenodo'da
+> arşivlendi: bütün sürümler için [10.5281/zenodo.23591166](https://doi.org/10.5281/zenodo.23591166), v1.0.0 için
+> [10.5281/zenodo.23591167](https://doi.org/10.5281/zenodo.23591167).
 
 ---
 
@@ -525,6 +528,20 @@ Lütfen makaleye atıf yapın; ayrıntılar [`CITATION.cff`](CITATION.cff) dosya
             Electric Fleets? Evidence from a Hilly Town},
   note   = {Manuscript in preparation for \emph{Logistics} (MDPI)},
   year   = {2026}
+}
+```
+
+Kodun ve verinin kendisine atıf için sonuçlarınızı üreten arşiv sürümünü kullanın. v1.0.0'ın DOI'si
+[10.5281/zenodo.23591167](https://doi.org/10.5281/zenodo.23591167); [10.5281/zenodo.23591166](https://doi.org/10.5281/zenodo.23591166) her zaman en son sürüme gider.
+
+```bibtex
+@software{arik_ulku_terrain_matters_package,
+  author    = {Ar{\i}k, Ahmet Ertu{\u{g}}rul and {\"U}lk{\"u}, M. Ali},
+  title     = {Terrain Matters: replication package},
+  version   = {v1.0.0},
+  publisher = {Zenodo},
+  year      = {2026},
+  doi       = {10.5281/zenodo.23591167}
 }
 ```
 
